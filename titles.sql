@@ -4,12 +4,11 @@
 DROP TABLE titles;
 
 -- Create the tables for departments.csv
-CREATE TABLE titles(title_id VARCHAR (30),
-						 title VARCHAR(30)
-);
+CREATE TABLE titles();
 
 -- Add Serial Key (???)
 ALTER TABLE titles ADD COLUMN title_id SERIAL PRIMARY KEY;
+ALTER TABLE titles ADD COLUMN title NOT NULL
 
 -- View Data Output & columns
 SELECT * FROM titles;
