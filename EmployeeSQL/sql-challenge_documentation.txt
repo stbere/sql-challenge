@@ -1,0 +1,8 @@
+# First started with schema_table.sql
+#  With these DB tables, I loaded departments, dept_emp, dept_manager_employees, salaries and titles csv data into the columns
+
+# I had a 'columns' error when trying to right-click and import the csv data into each table. 
+# I searched online and found this thread from Stackoverflow: https://stackoverflow.com/questions/20039856/import-excel-data-into-postgresql-9-3
+COPY mytable FROM '/path/to/csv/file' WITH CSV HEADER; -- must be superuser
+# That helped me import the data into each associated column
+
