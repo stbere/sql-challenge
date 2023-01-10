@@ -6,3 +6,12 @@
 COPY mytable FROM '/path/to/csv/file' WITH CSV HEADER; -- must be superuser
 # That helped me import the data into each associated column
 
+For QuickDatabaseDiagram.com:
+
+The "Departments" table contains two columns: "dept_no" and "dept_name".
+The "dept_emp" table contains two columns: "emp_no" and "dept_no". It represents the relationship between employees and departments, with each row indicating that an employee works in a particular department.
+The "dept_manager" table contains two columns: "dept_no" and "emp_no". It represents the relationship between departments and their managers, with each row indicating that an employee is the manager of a particular department.
+The "Employees" table contains several columns: "emp_no", "emp_title_id", "birth_date", "first_name", "last_name", "sex", and "hire_date".
+The "Salaries" table contains two columns: "emp_no" and "salary". It represents the salary history of employees, with each row indicating the salary of a particular employee at a specific point in time.
+The "Titles" table contains two columns: "title_id" and "title". It represents the various job titles held by employees, with each row indicating a specific job title.
+
