@@ -56,6 +56,11 @@ CREATE TABLE [Titles] (
     )
 )
 
+CREATE TABLE [Department Manager] (
+    [Dept_No] string  NULL ,
+    [Emp_No] int  NOT NULL 
+)
+
 ALTER TABLE [Department Employee] WITH CHECK ADD CONSTRAINT [FK_Department Employee_Emp_No] FOREIGN KEY([Emp_No])
 REFERENCES [Employees] ([Emp_No])
 
@@ -75,5 +80,15 @@ ALTER TABLE [Titles] WITH CHECK ADD CONSTRAINT [FK_Titles_Title_id] FOREIGN KEY(
 REFERENCES [Employees] ([Emp_Title_id])
 
 ALTER TABLE [Titles] CHECK CONSTRAINT [FK_Titles_Title_id]
+
+ALTER TABLE [Department Manager] WITH CHECK ADD CONSTRAINT [FK_Department Manager_Dept_No] FOREIGN KEY([Dept_No])
+REFERENCES [Departments] ([Dept_No])
+
+ALTER TABLE [Department Manager] CHECK CONSTRAINT [FK_Department Manager_Dept_No]
+
+ALTER TABLE [Department Manager] WITH CHECK ADD CONSTRAINT [FK_Department Manager_Emp_No] FOREIGN KEY([Emp_No])
+REFERENCES [Employees] ([Emp_No])
+
+ALTER TABLE [Department Manager] CHECK CONSTRAINT [FK_Department Manager_Emp_No]
 
 COMMIT TRANSACTION QUICKDBD
